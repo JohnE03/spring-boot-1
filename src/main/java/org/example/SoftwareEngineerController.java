@@ -11,7 +11,7 @@ import java.util.List;
 public class SoftwareEngineerController {
 
     @GetMapping
-    @RequestMapping("/list")
+    @RequestMapping("list")
     public List<SoftwareEngineer> getSoftwareEngineers() {
         return List.of(
                 new SoftwareEngineer(1, "John Doe", "Js, node, react, tailwindcss"),
@@ -21,7 +21,7 @@ public class SoftwareEngineerController {
     }
 
     @GetMapping
-    @RequestMapping("/count")
+    @RequestMapping("count")
     public int getCountOfSoftwareEngineers() {
         return SoftwareEngineer.getCount();
     }
