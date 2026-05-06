@@ -3,5 +3,3 @@ GET http://localhost:8080
 
 ###
 GET http://localhost:8080/api/software-engineers/list
-###
-GET http://localhost:8080/api/software-engineers/count

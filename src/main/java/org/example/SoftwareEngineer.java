@@ -1,9 +1,14 @@
 package org.example;
 
+import jakarta.persistence.*;
+
 import java.util.Objects;
 
+@Entity
 public class SoftwareEngineer {
-    private static int count;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
     private String techStack;
@@ -17,7 +22,6 @@ public class SoftwareEngineer {
         this.id = id;
         this.name = name;
         this.techStack = techStack;
-        count++;
     }
 
     public Integer getId() {
@@ -42,10 +46,6 @@ public class SoftwareEngineer {
 
     public void setTechStack(String techStack) {
         this.techStack = techStack;
-    }
-
-    public static int getCount() {
-        return count;
     }
 
     @Override
